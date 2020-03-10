@@ -9,7 +9,7 @@ import pymongo
 import skimage.io
 
 
-myclient = pymongo.MongoClient()
+myclient = pymongo.MongoClient('mongodb+srv://youssef:12345@cluster0-ns4tt.mongodb.net/test')
 mydb = myclient["face_recognition"]
 
 
