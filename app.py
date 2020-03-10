@@ -11,16 +11,16 @@ import numpy as np
 import pymongo
 import json
 
-application = Flask(__name__)
+app = Flask(__name__)
 
 
-@application.route("/")
+@app.route("/")
 def index():
     data = {}
     data["message"] = "Hello, Asmaa!"
     return jsonify(data)
 
-@application.route("/photo", methods=["POST"])
+@app.route("/photo", methods=["POST"])
 def index2():
     read = json.loads(request.get_json())
     img = read['img']
